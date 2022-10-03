@@ -1,0 +1,287 @@
+:root {
+    --primaryColor: #FFBE0B;
+    --secondaryColor: #FB5607;
+    --thirdColor: #FF006E;
+    --fourColor: #8338EC;
+    --fiveColor: #3A86FF;
+    --sixColor: #80FF72;
+    --sevenColor: #7EE8FA;
+    --aetColor: #0077B6;
+}
+.todoHome {
+    background-color: white;
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+}
+.todoGestionnaire {
+    background-color: #FFFCF9;
+    padding: 20px 20px;
+    border-radius: 16px;
+    width: 60%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.todoGestionnaire > h1 {
+    text-align: center;
+    background-color: var(--fiveColor);
+    padding: 16px 0;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 36px;
+}
+.addTaskForm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+.formField > input {
+    height: 100%;
+    background-color: transparent;
+    width: 97%;
+    border-radius: 6px;
+    padding: 15px 10px;
+    z-index: 1;
+    border: 1px solid gray;
+}
+.formFieldFocus {
+    transform: translateY(-123%) !important;
+    background-color: #FFFCF9;
+    color: var(--fiveColor);
+    z-index: 1 !important;
+    font-weight: 700 ;
+}
+.formField > label {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-left: 10px;
+    padding: 0 10px;
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+.addTaskForm > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px 0;
+    width: 7%;
+    background-color: var(--secondaryColor);
+    font-size: 20px;
+    border-radius: 6px;
+}
+.tasksTables {
+    margin: 12px 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /* background-color: #004d7a; */
+}
+.taskHome {
+    border-bottom: 1px solid rgb(180, 180, 180); 
+    /* background-color: #80FF72; */
+}
+.taskHomeDate {
+    color: grey;
+    display: flex;
+    gap: 0 12px;
+    align-items: center;
+}
+.taskHomeDate >:nth-child(1) {
+    font-size: 14px;
+}
+.taskHomeDate >:nth-child(2) {
+    font-size: 14px;
+}
+.taskHomeTask {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 5px 5px;
+    padding-left: 10px;
+    color: grey; 
+}
+.taskHomeTaskInput {
+    font-size: 18px;
+    width: 90%;
+    display: flex;
+    word-break: break-all;
+}
+.taskHomeTaskIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    height: 25px;
+    gap: 5px;
+}
+.taskHomeTaskIcons > :nth-child(1)  {
+    color: green;
+    font-size: 24px;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 6px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnRemoveDone {
+    color: red !important;
+    font-size: 24px;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 6px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.taskHomeTaskIcons .btnEdit  {
+    color: blue;
+    font-size: 24px;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 6px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.taskHomeTaskIcons .btnDelete  {
+    background-color: transparent;
+    border: 1px solid rgb(180, 180, 180);
+    color: red;
+    font-size: 24px;
+    height: 100%;
+    border-radius: 6px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.updateField {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 95%;
+    gap: 15px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.upadateFieldInput {
+    width: 90%;
+    border-radius: 6px;
+    padding: 0 10px;
+    border: 1px solid gray;
+    height: 100%;
+    transition: height 4s ease;
+}
+.updateFieldBtn {
+    display: flex;
+    gap: 20px;
+    margin-right: 0px;
+}
+.updateFieldBtn > :nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: green;
+    font-size: 25px;
+    background-color: transparent;
+    border-radius: 6px;
+    width: 26px;
+    border: 1px solid rgb(180, 180, 180);
+}
+.updateFieldBtn > :nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: red;
+    font-size: 25px;
+    background-color: transparent;
+    border-radius: 6px;
+    width: 26px;
+    border: 1px solid rgb(180, 180, 180);
+}
+.btnAllDeleted {
+    background-color: var(--fiveColor);
+    padding: 12px 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* **********************************************Responsive */   
+
+@media screen and (width < 767px) {
+    .todoGestionnaire {
+        padding: 20px 20px;
+        border-radius: 16px;
+        width: 100%;
+        height: 100%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .taskHomeTaskInput {
+        font-size: 16px;
+    }
+    .taskHomeTaskIcons {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+        height: 45px;
+        gap: 6px 5px;
+    }
+    .taskHomeTaskIcons > :nth-child(1), .taskHomeTaskIcons .btnEdit, .taskHomeTaskIcons .btnDelete    {
+        font-size: 14px;
+        height: 100%;
+    }
+}
+@media screen and (width < 992px) {
+    .todoGestionnaire {
+        padding: 20px 20px;
+        border-radius: 16px;
+        width: 100%;
+        height: 100%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .taskHomeTaskInput {
+        font-size: 16px;
+    }
+    .taskHomeTaskIcons {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+        height: 45px;
+        gap: 6px 5px;
+    }
+    .taskHomeTaskIcons > :nth-child(1), .taskHomeTaskIcons .btnEdit, .taskHomeTaskIcons .btnDelete    {
+        font-size: 14px;
+        height: 100%;
+    }
+}
+
+
+
+
